@@ -47,6 +47,8 @@ Keine Testanfragen ohne Abstimmung absenden. Bei einer neuen Domain muss das Bac
 
 Der Workflow verwendet Node.js 24 und liest Domain und Unterverzeichnis aus der Pages-Konfiguration. Die vorhandene ES-Modul-Konfiguration wird nicht durch eine generierte CommonJS-Datei überschrieben.
 
+**Nach einer Domainänderung unbedingt neu bauen:** Unter Actions → Deploy Next.js site to Pages → Run workflow ausführen. Eine Änderung der „Custom domain“ allein schreibt die bereits exportierten CSS-, JavaScript- und Bildpfade nicht um. `scripts/pages-config.mjs` leitet beim nächsten Build alle Pfade aus der aktuellen öffentlichen Pages-URL ab: bei `https://meai.support/` ohne Repository-Präfix, bei der GitHub-Projektadresse mit `/me-website-v2`.
+
 Lokaler Test für die Projektadresse:
 
 ```sh

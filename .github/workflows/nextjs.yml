@@ -29,19 +29,25 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      # A domain change requires a fresh build: Next embeds paths in HTML/JS/CSS.
+      - name: Resolve current public URL
+        id: site
+        run: node scripts/pages-config.mjs
+        env:
+          PAGES_URL: ${{ steps.pages.outputs.base_url }}
       - name: Install dependencies
         run: npm ci
       - name: Build static site
         run: npm run build:pages
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          NEXT_PUBLIC_SITE_ORIGIN: ${{ steps.pages.outputs.origin }}
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.site.outputs.base_path }}
+          NEXT_PUBLIC_SITE_ORIGIN: ${{ steps.site.outputs.origin }}
           NEXT_PUBLIC_HOSTING: github-pages
           NEXT_TELEMETRY_DISABLED: "1"
       - name: Verify exported routes and assets
         run: node scripts/check-pages.mjs
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.site.outputs.base_path }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
