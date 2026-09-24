@@ -1,6 +1,8 @@
 'use client';
 
-import Image from 'next/image';
+import { sitePath } from './site-path';
+
+import Image from './site-image';
 import { useEffect, useState } from 'react';
 import AccessButton from './access-button';
 
@@ -35,18 +37,18 @@ export default function SiteHeader() {
 
   return (
       <header className="site-header">
-        <a className="brand" href="/#top" aria-label="ME Startseite">
+        <a className="brand" href={sitePath('/#top')} aria-label="ME Startseite">
           <Image src="/media/me-logo.png" alt="ME" width={42} height={42} priority />
           <span>AI.Support</span>
         </a>
         <nav id="main-nav" className={menuOpen ? 'is-open' : ''} aria-label="Hauptnavigation" onClick={() => setMenuOpen(false)}>
-          <a href="/#funktionen">Funktionen</a>
-          <a href="/#plattform">Plattform</a>
-          <a href="/#sicherheit">Vertrauen</a>
-          <a href="/#inhalte">Anwendung</a>
-          <a href="/#geraete">Endgeräte</a>
-          <a href="/#faq">FAQ</a>
-          <a href="/#kontakt">Kontakt</a>
+          <a href={sitePath('/#funktionen')}>Funktionen</a>
+          <a href={sitePath('/#plattform')}>Plattform</a>
+          <a href={sitePath('/#sicherheit')}>Vertrauen</a>
+          <a href={sitePath('/#inhalte')}>Anwendung</a>
+          <a href={sitePath('/#geraete')}>Endgeräte</a>
+          <a href={sitePath('/#faq')}>FAQ</a>
+          <a href={sitePath('/#kontakt')}>Kontakt</a>
         </nav>
         <div className="header-actions">
           <button type="button" className="menu-toggle" aria-expanded={menuOpen} aria-controls="main-nav" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Schließen' : 'Menü'}</button>

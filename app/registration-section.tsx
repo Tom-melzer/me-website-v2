@@ -1,5 +1,7 @@
 'use client';
 
+import { sitePath } from './site-path';
+
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { sendRegistration, type RegistrationFields } from './registration-api';
 import { contactHref } from './contact-button';
@@ -91,7 +93,7 @@ export default function RegistrationSection() {
                 </div>
                 <label htmlFor="register-email">Geschäftliche E-Mail *<input id="register-email" name="email" type="email" autoComplete="email" maxLength={254} required /></label>
                 <label htmlFor="register-company">Unternehmensname *<input id="register-company" name="organisation_name" autoComplete="organization" maxLength={250} required /></label>
-                <p className="registration-privacy">* Pflichtfelder. Mit dem Absenden übermitteln Sie Ihre Angaben direkt an ME AI.Support zur Bearbeitung Ihrer Zugangsanfrage. Weitere Informationen finden Sie in unserer <a href="/datenschutz#registrierung" target="_blank" rel="noreferrer">Datenschutzerklärung (neuer Tab)</a>. Sie erteilen damit keine Werbeeinwilligung.</p>
+                <p className="registration-privacy">* Pflichtfelder. Mit dem Absenden übermitteln Sie Ihre Angaben direkt an ME AI.Support zur Bearbeitung Ihrer Zugangsanfrage. Weitere Informationen finden Sie in unserer <a href={sitePath('/datenschutz/#registrierung')} target="_blank" rel="noreferrer">Datenschutzerklärung (neuer Tab)</a>. Sie erteilen damit keine Werbeeinwilligung.</p>
                 <button className="button button-primary registration-submit" type="submit">{pending ? 'Anfrage wird gesendet …' : 'Zugang anfragen'}<span aria-hidden="true">→</span></button>
               </fieldset>
               {error && <div className="registration-error" role="alert" ref={feedback} tabIndex={-1}><strong>Bitte beachten</strong><p>{error}</p><a href={contactHref}>contact@meai.support</a></div>}

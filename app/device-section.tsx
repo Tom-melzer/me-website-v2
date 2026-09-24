@@ -1,5 +1,5 @@
 import AccessButton from './access-button';
-import Image from 'next/image';
+import Image from './site-image';
 
 const devices = [
   { label: 'PC & Laptop', title: 'Überblick am Arbeitsplatz.', text: 'Dokumente sichten, Anlageninformationen nachschlagen und Serviceberichte bearbeiten – mit viel Platz für Details auf dem großen Bildschirm.', icon: 'desktop' },

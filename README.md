@@ -41,4 +41,19 @@ Das Anmeldeformular sendet echte Anfragen an
 `https://backend.meai.support/api/inquiry/create`.
 Keine Testanfragen ohne Abstimmung absenden. Bei einer neuen Domain muss das Backend diese für browserseitige Anfragen zulassen.
 
-Der GitHub-Import richtet keine automatische Veröffentlichung ein und ändert das bestehende Hosting nicht. Für einen Wechsel des Hosting-Anbieters muss die vorhandene Sites-/Cloudflare-Konfiguration angepasst werden.
+## GitHub Pages
+
+Änderungen auf `main` werden durch `.github/workflows/nextjs.yml` automatisch statisch gebaut, geprüft und auf GitHub Pages veröffentlicht. In den Repository-Einstellungen muss Pages auf „GitHub Actions“ stehen.
+
+Der Workflow verwendet Node.js 24 und liest Domain und Unterverzeichnis aus der Pages-Konfiguration. Die vorhandene ES-Modul-Konfiguration wird nicht durch eine generierte CommonJS-Datei überschrieben.
+
+Lokaler Test für die Projektadresse:
+
+```sh
+NEXT_PUBLIC_BASE_PATH=/me-website-v2 NEXT_PUBLIC_SITE_ORIGIN=https://tom-melzer.github.io NEXT_PUBLIC_HOSTING=github-pages npm run build:pages
+NEXT_PUBLIC_BASE_PATH=/me-website-v2 node scripts/check-pages.mjs
+```
+
+Die statischen Dateien liegen danach unter `out/`. Interne Links, Bilder, Schriften und die Geräte-Weiterleitung unterstützen das Unterverzeichnis. Die Registrierung bleibt direkt mit dem bestehenden ME-Backend verbunden. Ein automatischer Test verschickt keine Registrierungen.
+
+Die bisherigen Sites-Veröffentlichungen werden durch diesen Workflow nicht verändert. `npm run build` bleibt der bisherige Vinext-Build; GitHub Pages verwendet ausdrücklich `npm run build:pages`.

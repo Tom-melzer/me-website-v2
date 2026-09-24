@@ -21,7 +21,7 @@ const sections = [
   {
     number: '03',
     title: 'Hosting und technische Dienstleister',
-    body: <p>Diese Informationswebsite wird über die Plattform Sites unter einer chatgpt.site-Adresse bereitgestellt. Bei der Auslieferung der Seiten verarbeiten die an Hosting und technischer Bereitstellung beteiligten Dienstleister Verbindungsdaten. Das Hosting dieser Informationswebsite ist vom Betrieb der ME Web-App zu unterscheiden. Aus dem Sitz unseres Unternehmens lässt sich kein ausschließlicher Speicher- oder Verarbeitungsort in Deutschland ableiten.</p>,
+    body: <><p>{process.env.NEXT_PUBLIC_HOSTING === 'github-pages' ? 'Diese Informationswebsite wird über GitHub Pages bereitgestellt. GitHub verarbeitet bei der Auslieferung technische Verbindungsdaten, einschließlich der IP-Adresse, unter anderem zum Schutz und sicheren Betrieb des Dienstes.' : 'Diese Informationswebsite wird über die Plattform Sites unter einer chatgpt.site-Adresse bereitgestellt. Bei der Auslieferung der Seiten verarbeiten die an Hosting und technischer Bereitstellung beteiligten Dienstleister Verbindungsdaten.'} Das Hosting dieser Informationswebsite ist vom Betrieb der ME Web-App zu unterscheiden. Aus dem Sitz unseres Unternehmens lässt sich kein ausschließlicher Speicher- oder Verarbeitungsort in Deutschland ableiten.</p>{process.env.NEXT_PUBLIC_HOSTING === 'github-pages' && <p>Weitere Informationen zu GitHub und der Verarbeitung durch den Hosting-Anbieter finden Sie in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">Datenschutzerklärung von GitHub</a>.</p>}</>,
   },
   {
     number: '04',

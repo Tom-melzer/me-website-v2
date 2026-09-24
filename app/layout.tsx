@@ -1,23 +1,24 @@
+import { sitePath } from './site-path';
 import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://me-ai-support-v2.tommelzer2.chatgpt.site'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_ORIGIN || 'https://me-ai-support-v2.tommelzer2.chatgpt.site'),
   title: 'ME AI.Support – Wissen, das mitarbeitet',
   description: 'Die intelligente Plattform für validiertes Herstellerwissen, ERP-verknüpften Anlagenkontext und geschütztes Erfahrungswissen im technischen Service.',
-  icons: { icon: '/favicon.png', apple: '/favicon.png' },
+  icons: { icon: sitePath('/favicon.png'), apple: sitePath('/favicon.png') },
   openGraph: {
     type: 'website',
     locale: 'de_DE',
     title: 'ME AI.Support – Wissen, das mitarbeitet',
     description: 'Die intelligente Plattform für validiertes Herstellerwissen, ERP-verknüpften Anlagenkontext und geschütztes Erfahrungswissen im technischen Service.',
-    images: [{ url: '/og.jpg', width: 1400, height: 788, alt: 'ME AI.Support – Wissen, das mitarbeitet.' }],
+    images: [{ url: sitePath('/og.jpg'), width: 1400, height: 788, alt: 'ME AI.Support – Wissen, das mitarbeitet.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ME AI.Support – Wissen, das mitarbeitet',
     description: 'Die intelligente Plattform für validiertes Herstellerwissen, ERP-verknüpften Anlagenkontext und geschütztes Erfahrungswissen im technischen Service.',
-    images: ['/og.jpg'],
+    images: [sitePath('/og.jpg')],
   },
 };
 

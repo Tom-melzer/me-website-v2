@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Image from './site-image';
 import { useState } from 'react';
 import SiteFooter from './site-footer';
 import SiteHeader from './site-header';

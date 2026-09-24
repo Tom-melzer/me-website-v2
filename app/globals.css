@@ -713,7 +713,7 @@ section[id] { scroll-margin-top: 110px; }
   .legal-contact-box { padding: 30px 25px; }
 }
 
-@font-face { font-family: Onest; src: url('/fonts/onest-variable.ttf') format('truetype'); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: Onest; src: url('../public/fonts/onest-variable.ttf') format('truetype'); font-weight: 100 900; font-style: normal; font-display: swap; }
 
 /* Entwurf 2: V1 visual language, with consistent typography and content grid. */
 :root { --muted: #46586a; }
