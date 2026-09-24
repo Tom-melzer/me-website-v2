@@ -9,6 +9,7 @@ for (const route of routes) {
   const file = join('out', route, 'index.html');
   assert(existsSync(file), 'Missing static route: ' + file);
   const html = readFileSync(file, 'utf8');
+  if (route !== 'web-app/') assert(/<a\b[^>]*href="https:\/\/frontend\.meai\.support"[^>]*target="_blank"[^>]*rel="noopener noreferrer"[^>]*>Login<\/a>/.test(html), 'Login must open the ME app safely in a new tab: ' + file);
   for (const [, url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
     if (!url.startsWith('/') || url.startsWith('//')) continue;
     assert(url.startsWith(basePath + '/'), 'URL outside Pages base path: ' + url);
