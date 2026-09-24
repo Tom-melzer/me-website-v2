@@ -34,7 +34,7 @@ export default function ImpressumPage() {
           <section className="legal-card">
             <span className="legal-label">Kontakt</span>
             <h2>Direkt erreichbar</h2>
-            <p><a href="tel:+496771930093">+49 6771 930093</a><br /><a href="mailto:info@meai.support">info@meai.support</a></p>
+            <p><a href="mailto:info@meai.support">info@meai.support</a></p>
           </section>
 
           <section className="legal-card">
