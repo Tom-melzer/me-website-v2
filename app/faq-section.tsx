@@ -11,7 +11,7 @@ const questions = [
   },
   {
     question: 'Auf welches Wissen greift ME zu?',
-    answer: 'ME wählt Quellen dynamisch passend zur Frage und zum Anlagenkontext aus – etwa Herstellerunterlagen, Unternehmensinformationen oder anonymisierte Praxiserfahrungen. Es gibt keine starre Rangfolge. Rund 60.000 technische PDFs werden schrittweise integriert. Die Dokumente werden dabei auf Quelle, Modell und Relevanz geprüft und mit den passenden Geräten verknüpft. Der Umfang verfügbarer Unterlagen kann je nach Hersteller und Modell variieren.',
+    answer: 'ME wählt Quellen dynamisch passend zur Frage und zum Anlagenkontext aus – etwa Herstellerunterlagen, Unternehmensinformationen oder anonymisierte Praxiserfahrungen. Es gibt keine starre Rangfolge. Die Wissensbasis umfasst vielfältige technische Dokumente zahlreicher Hersteller und Marken aus Kälte, Klima, Lüftung und Wärmepumpen – von Installationsanleitungen bis zu Servicehandbüchern. Die Dokumente werden auf Quelle, Modell und Relevanz geprüft und mit den passenden Geräten verknüpft. Der Umfang verfügbarer Unterlagen kann je nach Hersteller und Modell variieren.',
   },
   {
     question: 'Können wir vorhandene Kunden- und Anlagendaten nutzen?',

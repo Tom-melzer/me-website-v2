@@ -11,7 +11,7 @@ const sections = [
   {
     number: '01',
     title: 'Verantwortlicher',
-    body: <><p>ME AI.Support GmbH<br />Pionierweg 3<br />56348 Patersberg<br />Deutschland</p><p>Telefon: <a href="tel:+496771930093">+49 6771 930093</a><br />E-Mail: <a href="mailto:info@meai.support">info@meai.support</a></p></>,
+    body: <><p>ME AI.Support GmbH<br />Pionierweg 3<br />56348 Patersberg<br />Deutschland</p><p>E-Mail: <a href="mailto:info@meai.support">info@meai.support</a></p></>,
   },
   {
     number: '02',
@@ -51,7 +51,7 @@ const sections = [
   {
     number: '09',
     title: 'Zuständige Aufsichtsbehörde',
-    body: <p>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz<br />Hintere Bleiche 34<br />55116 Mainz<br />Telefon: +49 6131 8920-0<br />E-Mail: <a href="mailto:poststelle@datenschutz.rlp.de">poststelle@datenschutz.rlp.de</a><br />Website: <a href="https://www.datenschutz.rlp.de/" target="_blank" rel="noreferrer">datenschutz.rlp.de</a></p>,
+    body: <p>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz<br />Hintere Bleiche 34<br />55116 Mainz<br />E-Mail: <a href="mailto:poststelle@datenschutz.rlp.de">poststelle@datenschutz.rlp.de</a><br />Website: <a href="https://www.datenschutz.rlp.de/" target="_blank" rel="noreferrer">datenschutz.rlp.de</a></p>,
   },
   {
     number: '10',

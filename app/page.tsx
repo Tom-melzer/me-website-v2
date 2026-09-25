@@ -199,8 +199,8 @@ export default function Home() {
         </div>
 
         <div className="proof-strip" aria-label="Stand der Plattform">
-          <div><strong>Über 30 Hersteller</strong><span>Hersteller im Datenbestand</span></div>
-          <div><strong>ca. 60.000 PDFs</strong><span>Technische Dokumente in kontrollierter Integration</span></div>
+          <div><strong>Hersteller &amp; Marken</strong><span>Ein breites Spektrum aus Kälte, Klima, Lüftung und Wärmepumpen</span></div>
+          <div><strong>Umfangreiches Wissen</strong><span>Vielfältige technische Dokumente – von Installationsanleitungen bis zu Servicehandbüchern</span></div>
           <div><strong>ERP-verknüpft</strong><span>Kunden, Standorte, Anlagen und Geräte</span></div>
         </div>
 
@@ -264,7 +264,7 @@ export default function Home() {
           <p>ME unterscheidet zwischen dem Unternehmensbereich mit internen Unterlagen und technischen Erkenntnissen für die gemeinsame Wissensbasis. Diese Trennung ist die Grundlage des Berechtigungskonzepts.</p>
         </div>
         <div className="assurance-grid">
-          <article><span className="assurance-label">Unternehmensbereich</span><h3>Wissen im richtigen Kontext.</h3><p>Kunden, Anlagen und interne Unterlagen gehören zum Arbeitsbereich Ihres Betriebs. Die Informationswebsite zeigt Funktionen der App; sie ist kein Zugang zu Ihren Kundenakten.</p></article>
+          <article><span className="assurance-label">Unternehmensbereich</span><h3>Ihr Firmenwissen. Geschützt.</h3><p>Kunden- und Anlagendaten sowie interne Unterlagen bleiben in einem geschützten, klar abgegrenzten Firmenbereich. Nur berechtigte Personen Ihres Unternehmens erhalten Zugriff. Andere Betriebe können diese Daten nicht einsehen.</p></article>
           <article><span className="assurance-label">Berechtigungen</span><h3>Gezielter Zugriff für Ihr Team.</h3><p>Das Berechtigungskonzept sieht den Zugriff durch autorisierte Nutzer Ihres Unternehmens vor. Konkrete Zugriffsrechte und Datenverarbeitungen sind Gegenstand der Einrichtung und der Vereinbarungen zur ME-App.</p></article>
           <article><span className="assurance-label">Wissensbereiche</span><h3>Gemeinsam aus Erfahrung lernen.</h3><p>Für die gemeinsame Wissensbasis sind technische Muster wie Gerätemodell, Fehlerbild, Ursache und Lösung vorgesehen. Die branchenübergreifende Nutzung setzt eine wirksame Anonymisierung und die erforderlichen Nutzungsrechte voraus.</p></article>
         </div>
