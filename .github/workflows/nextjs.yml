@@ -44,6 +44,8 @@ jobs:
           NEXT_PUBLIC_SITE_ORIGIN: ${{ steps.site.outputs.origin }}
           NEXT_PUBLIC_HOSTING: github-pages
           NEXT_TELEMETRY_DISABLED: "1"
+      - name: Test login integration without contacting production
+        run: node --experimental-strip-types --test scripts/login.test.mjs
       - name: Verify exported routes and assets
         run: node scripts/check-pages.mjs
         env:

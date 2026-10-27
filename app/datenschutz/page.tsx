@@ -93,12 +93,18 @@ export default function DatenschutzPage() {
             </section>
           ))}
         </div>
+        <section className="legal-contact-box" id="login">
+          <span className="legal-label">Firmenzuordnung beim Login</span>
+          <h2>Der passende Zugang zu Ihrer Firma.</h2>
+          <p>Wenn Sie den Login öffnen, wird zunächst keine E-Mail-Adresse übertragen. Erst mit „Weiter zum Login“ sendet Ihr Browser die eingegebene Adresse über HTTPS an backend.meai.support, um die zugehörige Firma zu ermitteln. Sind mehrere Firmen zugeordnet, wählen Sie die gewünschte Firma aus. Anschließend öffnet sich deren Login auf einer Unterdomain von frontend.meai.support in einem neuen Tab.</p>
+          <p>Die E-Mail-Adresse wird bei der Firmenabfrage und bei der Weiterleitung als URL-Parameter verwendet. Sie kann deshalb in technischen Serverprotokollen und beim Aufruf der App im Browserverlauf erscheinen. Unser Landingpage-Code speichert die Eingabe nicht im Local Storage und sendet bei der Firmenabfrage keine Anmeldecookies oder Referrer-Adresse mit. Beim Schließen des Dialogs wird die Eingabe im Formular zurückgesetzt. Passwörter und die eigentliche Anmeldung werden nicht durch dieses Formular verarbeitet, sondern erst im Login der ME-App.</p>
+        </section>
         <section className="legal-contact-box">
           <span className="legal-label">Datenschutzanfragen</span>
           <h2>Wir helfen Ihnen weiter.</h2>
           <p>Wenden Sie sich mit Fragen oder zur Ausübung Ihrer Rechte an <a href="mailto:info@meai.support">info@meai.support</a>.</p>
         </section>
-        <p className="legal-updated">Stand: 24. September 2026</p>
+        <p className="legal-updated">Stand: 27. Oktober 2026</p>
       </article>
       <SiteFooter note="Transparenz für Ihre Daten." />
     </main>

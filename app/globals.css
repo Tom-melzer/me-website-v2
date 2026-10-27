@@ -799,3 +799,26 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
  .contact-panel { padding: 28px 22px; }.float-card { transform: scale(.8); }
 }
 @media(prefers-reduced-motion:reduce) { .hero-phone, .showcase-device img { animation: none; } }
+
+/* Native modal provides focus trapping and makes the page behind it inert. */
+.login-dialog { position: fixed; inset: 0; width: min(540px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); margin: auto; padding: 36px; overflow-y: auto; color: var(--ink); background: #f8fbff; border: 1px solid #dce5ef; border-radius: 26px; box-shadow: 0 30px 100px #071d3b40; }
+.login-dialog::backdrop { background: #081b36a6; backdrop-filter: blur(9px); }
+.login-dialog h2 { font-size: clamp(26px, 5vw, 34px); margin: 16px 0; line-height: 1.15; letter-spacing: -.025em; }
+.login-dialog p { font-size: 16px; line-height: 1.6; margin: 0 0 18px; }
+.login-dialog form { display: grid; gap: 12px; }
+.login-dialog label { font-size: 15px; font-weight: 600; }
+.login-dialog input, .login-dialog select { width: 100%; min-height: 48px; padding: 12px; font: inherit; color: var(--ink); background: white; border: 1px solid #8ba0b8; border-radius: 12px; }
+.login-dialog input:focus-visible, .login-dialog select:focus-visible { outline: 3px solid #508bce; outline-offset: 3px; }
+.login-dialog input:disabled, .login-dialog select:disabled { opacity: .7; }
+.login-dialog .login-privacy { font-size: 13px; color: var(--muted); margin: 0; }
+.login-dialog a { text-decoration: underline; text-underline-offset: 3px; }
+.login-dialog .login-error { color: #a82121; background: #fff0f0; padding: 12px; border-radius: 12px; margin: 0; }
+.login-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: transparent; color: inherit; font-size: 28px; cursor: pointer; }
+.login-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+.login-actions button { cursor: pointer; font-family: inherit; }
+.login-actions button:disabled { opacity: .55; cursor: wait; }
+.login-secondary { padding: 12px; background: transparent; border: 0; color: inherit; font-size: 14px; }
+[data-theme='dark'] .login-dialog { background: #14263d; border-color: #38516e; }
+[data-theme='dark'] .login-dialog input, [data-theme='dark'] .login-dialog select { background: #0b1b2f; border-color: #5c7591; }
+[data-theme='dark'] .login-dialog .login-error { color: #ffcbcb; background: #542c36; }
+@media (max-width: 600px) { .login-dialog { padding: 30px 22px 24px; } .login-actions .button { width: 100%; justify-content: center; } }
